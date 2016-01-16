@@ -15,18 +15,18 @@ const (
 
 type Storage interface {
 
-	Append(protocol *Protocol) bool;
+	Init() bool
 
-	BatchAppend(protocol []*Protocol) bool;
+	Append(protocol *Protocol) bool
 
-	Read(pool string,level ProtocolLevel,limit uint32,order ResultOrder) []string;
+	BatchAppend(protocol []*Protocol) bool
 
-	Clean(pool string, level ProtocolLevel,time time.Time) bool;
+	Read(pool string,level ProtocolLevel,limit uint32,order ResultOrder) []string
 
-	Delete(pool string) bool;
+	Clean(pool string, level ProtocolLevel,time time.Time) bool
 
-	CleanAll() bool;
+	Delete(pool string) bool
 
-
+	CleanAll() bool
 
 }
