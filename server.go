@@ -1,4 +1,4 @@
-package server
+package muls
 
 type Server interface {
 	Run() bool;

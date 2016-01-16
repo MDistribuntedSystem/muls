@@ -1,12 +1,11 @@
 package main
 
-import "muls/server/transpports"
+import "muls/transpports"
 
-func main(){
+func main() {
 
-	server := transpports.NewUdpServer("127.0.0.1",5678)
+	server := transpports.NewUdpServer("127.0.0.1", 5678)
 
 	server.Run()
-
 
 }

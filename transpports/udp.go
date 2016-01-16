@@ -3,7 +3,7 @@ import (
 	"net"
 	"fmt"
 	"bytes"
-	"muls/protocol"
+	"muls"
 )
 
 const MAX_BUFFER_SIZE = 1//10M
@@ -89,7 +89,7 @@ func (self *UdpServer)Loop(){
 func (self *UdpServer) Read(buffer []byte,size int){
 
 
-	protocol := protocol.NewProtocolWithBytes(buffer[0:size])
+	protocol := muls.NewProtocolWithBytes(buffer[0:size])
 
 	self.buffer.WriteString(protocol.Fmt())
 	self.buffer.WriteString("\n")
